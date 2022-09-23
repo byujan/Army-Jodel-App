@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="KGk-i7-Jjw" customClass="MessageCell" customModule="demo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="TextHOlder" translatesAutoresizingMaskIntoConstraints="NO" id="0jP-sR-5cR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <color key="textColor" systemColor="labelColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tV-wa-Jzm">
+                        <rect key="frame" x="2" y="84" width="33" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jA-2x-cT6">
+                        <rect key="frame" x="285" y="70" width="30" height="30"/>
+                        <state key="normal" title="👍"/>
+                        <connections>
+                            <action selector="likePressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="zt6-bm-iLY"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="0jP-sR-5cR" secondAttribute="trailing" id="8qm-8r-G2j"/>
+                    <constraint firstAttribute="bottom" secondItem="9jA-2x-cT6" secondAttribute="bottom" id="RE0-xs-amM"/>
+                    <constraint firstAttribute="trailing" secondItem="9jA-2x-cT6" secondAttribute="trailing" constant="5" id="Vaz-sM-Boa"/>
+                    <constraint firstItem="5tV-wa-Jzm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="2" id="W1x-ud-esF"/>
+                    <constraint firstItem="0jP-sR-5cR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="eAM-CZ-cJz"/>
+                    <constraint firstAttribute="bottom" secondItem="0jP-sR-5cR" secondAttribute="bottom" id="kc0-W8-XiE"/>
+                    <constraint firstAttribute="bottom" secondItem="5tV-wa-Jzm" secondAttribute="bottom" id="mYn-Vp-DYr"/>
+                    <constraint firstItem="0jP-sR-5cR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="sTn-I7-sEX"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="likeButton" destination="9jA-2x-cT6" id="Ceq-Vh-edu"/>
+                <outlet property="likesField" destination="5tV-wa-Jzm" id="T5X-7N-OYG"/>
+                <outlet property="textField" destination="0jP-sR-5cR" id="RiC-wP-XOx"/>
+            </connections>
+            <point key="canvasLocation" x="-194.20289855072465" y="124.55357142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
